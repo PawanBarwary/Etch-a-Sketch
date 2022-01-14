@@ -1,3 +1,7 @@
+:root {
+  --grid-size: 100;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -13,18 +17,14 @@ button {
 }
 
 .container {
-  width: 100%;
-}
-
-.row {
-  display: flex;
-}
-
-.grid-item {
-  height: 1em;
-  width: 1em;
   border: 1px solid black;
+  width: 90vh;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-template-rows: repeat(var(--grid-size), 1fr);
 }
+
 
 .hover {
   background-color: gray;
