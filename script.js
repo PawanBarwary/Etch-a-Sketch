@@ -1,15 +1,24 @@
-const body = document.querySelector('body');
+const main = document.querySelector('main');
 const button = document.querySelector('button');
 const root = document.querySelector(':root');
+const colors = document.querySelectorAll('.color');
 let container;
 
+const changePenColor = (colorButton) => {
+  console.log(colorButton.classList[1]);
+  root.style.setProperty('--hover-color', colorButton.classList[1]);
+} 
+
+colors.forEach(colorButton => {
+  colorButton.addEventListener('click', () => changePenColor(colorButton) );
+});
+
+
 const validateInput = (input) => {
-  console.log(typeof input);
   if(typeof input != 'number') {
     alert("You can only input numbers!");
     return;
-  }
-  else {
+  } else {
     if (input > 150) {
       alert("Your grid needs to be under 150 squares wide");
       return;
@@ -33,11 +42,11 @@ const createGrid = (size) => {
     div.addEventListener('mouseover', (event) => div.classList.add('hover'));
     container.appendChild(div);
   }
-  body.appendChild(container);
+  main.appendChild(container);
 };
 
 const clearGrid = () => {
-  body.removeChild(container);
+  main.removeChild(container);
   const grid = parseInt(prompt("What size of grid would you like?"));
   createGrid(grid);
 };

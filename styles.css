@@ -1,12 +1,15 @@
 :root {
   --grid-size: 100;
+  --hover-color: gray;
 }
 
 body {
   min-height: 100vh;
+}
+
+main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -27,5 +30,55 @@ button {
 
 
 .hover {
-  background-color: gray;
+  background-color: var(--hover-color);
+}
+
+.color {
+  border: .1px solid black;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+}
+
+.color:hover {
+  border: 1px solid yellow;
+}
+
+.colors {
+  width: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.purple {
+  background-color: purple;
 }
