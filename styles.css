@@ -1,0 +1,31 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 10px;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.grid-item {
+  height: 1em;
+  width: 1em;
+  border: 1px solid black;
+}
+
+.hover {
+  background-color: gray;
+}
