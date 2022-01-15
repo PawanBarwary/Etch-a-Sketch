@@ -6,15 +6,25 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
-  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <title>Etch a Sketch</title>
 </head>
 <body>
-  <button>Clear</button>
-  <main>
-    <div class="color-palette">
-      <h1>Colors</h1>
+  <h1>
+    Etch a Sketch
+  </h1>
+  <div class="content">
+    <aside>
+      <div class="menu">
+        <div class="button clear">Clear Sketch</div>
+        <div class="button resolution" 
+            title="Click this button to change how squares there are on the canvas. By default, it is 70.">
+            Change Sketch Resolution</div>
+      </div>
+      <div class="color-palette">
+        <h2>Colors</h2>
         <div class="colors">
           <div class="color white"></div>
           <div class="color black"></div>
@@ -24,8 +34,10 @@
           <div class="color yellow"></div>
           <div class="color orange"></div>
           <div class="color purple"></div>
-      </div>
-    </div>
-  </main>
+        </div>
+    </aside>
+    <main>
+    </main>
+  </div>
 </body>
 </html>

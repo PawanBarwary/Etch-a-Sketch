@@ -1,9 +1,11 @@
 const main = document.querySelector('main');
-const button = document.querySelector('button');
+const clearButton = document.querySelector('.clear');
+const resolutionButton = document.querySelector('.resolution');
 const root = document.querySelector(':root');
 const colors = document.querySelectorAll('.color');
 let currentColor = 'black';
 let container;
+
 
 const onHover = (div) => {
   div.style.backgroundColor = currentColor;
@@ -44,17 +46,23 @@ const createGrid = (size) => {
     div.classList.add('grid-item');
     div.addEventListener('mouseover', () => onHover(div) );
     container.appendChild(div);
-  }
+    }
   main.appendChild(container);
 };
 
 const clearGrid = () => {
-  main.removeChild(container);
-  const grid = parseInt(prompt("What size of grid would you like?"));
-  createGrid(grid);
+  const divs = document.querySelectorAll('.grid-item');
+  divs.forEach( child => child.style.backgroundColor = "white" );
 };
 
-button.addEventListener('click', clearGrid);
+const changeResolution = () => {
+  main.removeChild(container);
+  const grid = parseInt(prompt("What resolution would you like? \nExample: for 100 X 100 squares you would enter '100')"));
+  createGrid(grid);
+}
+
+clearButton.addEventListener('click', clearGrid);
+resolutionButton.addEventListener('click', changeResolution);
 
 createGrid(70);
 
