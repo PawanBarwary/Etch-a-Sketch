@@ -2,17 +2,20 @@ const main = document.querySelector('main');
 const button = document.querySelector('button');
 const root = document.querySelector(':root');
 const colors = document.querySelectorAll('.color');
+let currentColor = 'black';
 let container;
 
+const onHover = (div) => {
+  div.style.backgroundColor = currentColor;
+};
+
 const changePenColor = (colorButton) => {
-  console.log(colorButton.classList[1]);
-  root.style.setProperty('--hover-color', colorButton.classList[1]);
-} 
+  currentColor = colorButton.classList[1];
+};
 
 colors.forEach(colorButton => {
   colorButton.addEventListener('click', () => changePenColor(colorButton) );
 });
-
 
 const validateInput = (input) => {
   if(typeof input != 'number') {
@@ -39,7 +42,7 @@ const createGrid = (size) => {
   for(let i = 0; i<size**2; i++) {
     const div = document.createElement('div');
     div.classList.add('grid-item');
-    div.addEventListener('mouseover', (event) => div.classList.add('hover'));
+    div.addEventListener('mouseover', () => onHover(div) );
     container.appendChild(div);
   }
   main.appendChild(container);
