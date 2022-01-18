@@ -23,7 +23,7 @@ colors.forEach(colorButton => {
 const createGrid = (size) => {
   root.style.setProperty('--grid-size', size);
   container = document.createElement('div');
-  container.classList.add('container');
+  container.classList.add('canvas');
   for(let i = 0; i<size**2; i++) {
     const div = document.createElement('div');
     div.classList.add('grid-item');
