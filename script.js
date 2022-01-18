@@ -3,6 +3,7 @@ const clearButton = document.querySelector('.clear');
 const resolutionButton = document.querySelector('.resolution');
 const root = document.querySelector(':root');
 const colors = document.querySelectorAll('.color');
+const resolutionRange = document.querySelector('#resolution');
 let currentColor = 'black';
 let container;
 
@@ -19,25 +20,7 @@ colors.forEach(colorButton => {
   colorButton.addEventListener('click', () => changePenColor(colorButton) );
 });
 
-const validateInput = (input) => {
-  if(typeof input != 'number') {
-    alert("You can only input numbers!");
-    return;
-  } else {
-    if (input > 150) {
-      alert("Your grid needs to be under 150 squares wide");
-      return;
-    }
-    return true;
-  }
-};
-
 const createGrid = (size) => {
-  if (validateInput(size) !== true) { 
-    const grid = parseInt(prompt("What size of grid would you like?"));
-    createGrid(grid);
-    return;
-  }
   root.style.setProperty('--grid-size', size);
   container = document.createElement('div');
   container.classList.add('container');
@@ -56,13 +39,15 @@ const clearGrid = () => {
 };
 
 const changeResolution = () => {
+  
   main.removeChild(container);
-  const grid = parseInt(prompt("What resolution would you like? \nExample: for 100 X 100 squares you would enter '100')"));
-  createGrid(grid);
+  createGrid(resolutionRange.value);
 }
 
+console.log(resolutionRange);
+resolutionRange.addEventListener('change', changeResolution);
 clearButton.addEventListener('click', clearGrid);
-resolutionButton.addEventListener('click', changeResolution);
+
 
 createGrid(70);
 
