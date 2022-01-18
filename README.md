@@ -1,4 +1,4 @@
-# Etch-a-Sketch
+# Etch a Sketch
 
 ## Preview 
 ![Preview GIF](https://media.giphy.com/media/Ry5uAHeuS4SUMwGiuN/giphy.gif)
