@@ -9,7 +9,7 @@ This is an Etch-a-Sketch app where you can draw pictures with different colors a
 
 ## Made With
 
-This web application was made using HTML, CSS and Vanilla Javascript. The canvas is generated with the desired resolution using CSS grid. The grid consists of divs with event listeners that detect hovering mouse movements. The event handler subsequently changes the color of the div in question. 
+This web application was made using HTML, CSS and Vanilla JavaScript. The canvas is generated with the desired resolution using CSS grid. The grid consists of divs with event listeners that detect hovering mouse movements. The event handler subsequently changes the color of the div in question. 
 
 ---
 
