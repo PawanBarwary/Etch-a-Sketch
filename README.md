@@ -15,4 +15,4 @@ This web application was made using HTML, CSS and Vanilla JavaScript. The canvas
 
 ## Try it Out
 
-https://pawanbarwary.github.io/Etch-a-Sketch/
+https://pawanbarwary.github.io/etch-a-sketch/
